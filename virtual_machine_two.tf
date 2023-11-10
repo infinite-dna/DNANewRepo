@@ -38,14 +38,7 @@ resource "azurerm_virtual_machine_extension" "web_server_install_2" {
 
   settings = <<SETTINGS
     {
-      "commandToExecute": "powershell -ExecutionPolicy Unrestricted Install-WindowsFeature -Name Web-Server -IncludeAllSubFeature -IncludeManagementTools
-      ;mkdir c:\demo 
-      ;Invoke-WebRequest -Uri https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe -OutFile C:\demo\python-installer.exe
-      ; Start-Process -Wait -FilePath C:\demo\python-installer.exe -ArgumentList '/quiet', 'InstallAllUsers=1', 'PrependPath=1'
-      ; Remove-Item -Path C:\demo\python-installer.exe
-      ; rmdir c:\demo
-      ; python -m pip install --upgrade pip
-      ; pip install ansible"
+      "commandToExecute": "powershell -ExecutionPolicy Unrestricted Install-WindowsFeature -Name Web-Server -IncludeAllSubFeature -IncludeManagementTools"
     }
   SETTINGS
 }
