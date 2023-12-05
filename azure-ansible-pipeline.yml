@@ -12,7 +12,7 @@ steps:
 - task: UsePythonVersion@0
   displayName: 'Install Python'
   inputs:
-    versionSpec: '3.8.4'
+    versionSpec: '3.10.13'
 
 - task: AzureCLI@2
   displayName: 'Azure CLI'
