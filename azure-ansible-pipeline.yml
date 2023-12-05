@@ -14,10 +14,10 @@ jobs:
       version: '3.x'
       performMultiLevelLookup: true
 
-  - task: UseNode@2
+  - task: NodeTool@2
     displayName: 'Use Node.js'
     inputs:
-      version: '16.x'
+      versionSpec: '16.x'
 
   - task: InstallAnsible@1
     displayName: 'Install Ansible'
